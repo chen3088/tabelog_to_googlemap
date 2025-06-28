@@ -36,7 +36,7 @@ pip install requests beautifulsoup4 pandas tqdm
 python
 複製
 編輯
-base_url = "https://tabelog.com/tokyo/rstLst/"  # 修改地區如 osaka、kyoto
+base_url = "https://tabelog.com/tokyo/rstLst/"  # 修改地區如 osaka、kyoto URL必須是日文界面
 page_count = 3                                   # 要抓取的頁數
 rating_threshold = 3.5                           # 評分門檻
 output_csv_name = "tabelog_高評分清單.csv"       # 匯出檔名
