@@ -21,10 +21,6 @@
 
 ---
 
-## 🔧 安裝方式 Installation
-
-1. 建議使用 Python 3.8+
-2. 安裝必要套件（使用 pip）
 
 ```bash
 pip install requests beautifulsoup4 pandas tqdm
@@ -41,3 +37,16 @@ page_count = 3                                   # 要抓取的頁數
 rating_threshold = 3.5                           # 評分門檻
 output_csv_name = "tabelog_高評分清單.csv"       # 匯出檔名
 執行後會自動顯示進度與完成訊息，CSV 檔案會出現在同一資料夾下。
+中文網站版:
+base_url         = "https://tabelog.com/tw/tokyo/rstLst/cafe"  # 不帶 /{page}/
+page_count       = 5                                         # 要爬的頁數 n
+rating_threshold = 3.8                                       # 評分門檻
+output_file      = "tabelog_high_score.csv"                  # 輸出檔名
+pause_per_item   = 0.5                                       # 請求間隔（秒）
+'''bash
+📝 注意事項
+尊重 robots.txt：請先確認目標站點允許爬取
+
+延遲請求：建議 pause_per_item ≥ 0.5s，避免過度負載
+
+錯誤重試：預設遇 429 會自動指數退避重試
